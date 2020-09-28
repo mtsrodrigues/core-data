@@ -86,7 +86,7 @@ public struct DataTransform<A> {
 }
 
 
-public extension NSPropertyDescription {
+extension NSPropertyDescription {
     public struct PropertyOptions : OptionSet {
         public let rawValue: Int
         public init(rawValue: Int) {

@@ -79,13 +79,13 @@ extension URL {
 
 extension String {
     public func removingCharacters(in set: CharacterSet) -> String {
-        var chars = characters
-        for idx in chars.indices.reversed() {
-            if set.contains(String(chars[idx]).unicodeScalars.first!) {
-                chars.remove(at: idx)
+        var copy = self
+        for idx in copy.indices.reversed() {
+            if set.contains(String(copy[idx]).unicodeScalars.first!) {
+                copy.remove(at: idx)
             }
         }
-        return String(chars)
+        return copy
     }
 }
 

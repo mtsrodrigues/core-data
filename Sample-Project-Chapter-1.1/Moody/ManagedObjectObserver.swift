@@ -25,12 +25,12 @@ final class ManagedObjectObserver {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(token)
+        NotificationCenter.default.removeObserver(token as Any)
     }
 
     // MARK: Private
 
-    fileprivate var token: NSObjectProtocol!
+    fileprivate var token: NSObjectProtocol?
 
     fileprivate func changeType(of object: NSManagedObject, in note: ObjectsDidChangeNotification) -> ChangeType? {
         let deleted = note.deletedObjects.union(note.invalidatedObjects)

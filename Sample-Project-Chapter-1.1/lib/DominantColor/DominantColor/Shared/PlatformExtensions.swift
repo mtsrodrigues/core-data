@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIImage {
+extension UIImage {
     /**
     Computes the dominant colors in the receiver
 
